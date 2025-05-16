@@ -4,7 +4,7 @@
 
 run() {
   echo "+ Running: $*"
-  read -p "Proceed? [Y/n]: "; confirm
+  read -p "Proceed? [Y/n]: " confirm
   if [[ "$confirm" =~ ^[Nn]$ ]] then
     echo "Aborted."
   else
