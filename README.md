@@ -31,7 +31,7 @@ makepkg -si
 #### Local Package
 run:
 ```bash
-sudo pacman -U (replace this with the directory with the package)/archapt-X.X.X-1-any.pkg.tar.zst
+sudo pacman -U (replace this with the package path)
 ```
 
 ### Script
