@@ -8,6 +8,8 @@ for the people who are too stupid to realize that arch's package manager is pacm
 - search
 - upgrade
 - update
+- list
+- info
 
 ## INSTALLATION (AUR)
 coming soon™
