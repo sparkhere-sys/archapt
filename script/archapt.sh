@@ -32,17 +32,24 @@ translate() {
       shift
       run "sudo pacman -Ss $*"
       ;;
+    list)
+      run "sudo pacman -Q" 
+      ;;
+    show)
+      shift
+      run "sudo pacman -Qi $*"
+      ;;
     moo)
       echo "brother this is not debian"
       ;;
     *)
-      echo "Invalid command. Available commands: install, remove, update, upgrade, search"
+      echo "Invalid command. Available commands: install, remove, update, upgrade, search, list, show"
       ;;
   esac
 }
 
 if [[ $# -eq 0 ]]; then
-  echo "Available commands: install, remove, update, upgrade, search"
+  echo "Available commands: install, remove, update, upgrade, search, list, show"
   exit 1
 fi
 
