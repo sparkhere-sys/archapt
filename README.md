@@ -24,7 +24,7 @@ just download it and put it wherever you want. run this command:
 chmod +x archapt.sh
 ```
 
-#### Binary
+### Binary
 do these commands:
 
 ```bash
