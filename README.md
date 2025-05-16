@@ -22,6 +22,7 @@ coming soon™
 - base-devel (install with sudo pacman -S --needed base-devel)
   
 **Instructions**
+
 Open up the terminal, then cd to the directory with the source code. Run:
 ```bash
 makepkg -si
