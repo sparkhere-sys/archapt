@@ -1,7 +1,7 @@
 # archapt
 for the people who are too stupid to realize that arch's package manager is pacman, not apt
 
-**DISCLAIMER**: This script runs 
+**DISCLAIMER**: This script just converts APT commands to pacman commands. Don't get it twisted, APT wasn't actually ported to Arch, as cool as that might be.
 
 ## SUPPORTED COMMANDS
 - install
