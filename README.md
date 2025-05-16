@@ -16,7 +16,23 @@ coming soon™
 
 ## INSTALLATION (manual)
 ### Package (.pkg.tar.xz)
-coming soon™
+#### Building from Source
+**Dependencies:**
+- Arch or any Arch-based Linux distro (duh)
+- base-devel (install with sudo pacman -S --needed base-devel)
+  
+**Instructions**
+Open up the terminal, then cd to the directory with the source code. Run:
+```bash
+makepkg -si
+```
+...which automatically builds and installs archapt.
+
+#### Local Package
+run:
+```bash
+sudo pacman -U (replace this with the directory with the package)/archapt-X.X.X-1-any.pkg.tar.zst
+```
 
 ### Script
 just download it and put it wherever you want. run this command:
