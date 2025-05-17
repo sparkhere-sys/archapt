@@ -1,4 +1,4 @@
-# Maintainer: Spark spark-fr@outlook.com
+# Maintainer: Spark <spark-fr@outlook.com>
 pkgname=archapt
 pkgver=1.0.1
 pkgrel=1
