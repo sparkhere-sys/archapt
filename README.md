@@ -23,7 +23,11 @@ coming soon™
   
 **Instructions**
 
-Open up the terminal, then cd to the directory with the source code. Run:
+Open up the terminal, then clone the repo:
+```bash
+git clone https://github.com/sparkhere-sys/archapt.git
+```
+`cd` to the directory with the cloned repo. Run:
 ```bash
 makepkg -si
 ```
