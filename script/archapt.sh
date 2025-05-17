@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # archapt v1.0.2
-skip=0
+# github: https://github.com/sparkhere-sys/archapt
+
+skip=0 # 0 = false, 1 = true
 for arg in "$@"; do
   if [[ arg == "--noconfirm" ]]; then
     skip=1
@@ -61,7 +63,9 @@ translate() {
 }
 
 if [[ $# -eq 0 ]]; then
+  echo "Usage: apt <command> <pkg> <flags>"
   echo "Available commands: install, remove, update, upgrade, search, list, info"
+  echo "Available flags: --noconfirm"
   exit 1
 fi
 
