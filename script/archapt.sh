@@ -28,17 +28,17 @@ translate() {
   case "$1" in
     install)
       shift
-      run "sudo pacman -Syu $*"
+      run "sudo pacman -Syu ${skip:+--noconfirm} $*"
       ;;
     remove)
       shift
-      run "sudo pacman -Rns $*"
+      run "sudo pacman -Rns ${skip:+--noconfirm} $*"
       ;;
     update)
-      run "sudo pacman -Sy"
+      run "sudo pacman -Sy ${skip:+--noconfirm}"
       ;;
     upgrade)
-      run "sudo pacman -Syu"
+      run "sudo pacman -Syu ${skip:+--noconfirm}"
       ;;
     search)
       shift
