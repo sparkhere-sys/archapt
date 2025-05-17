@@ -5,9 +5,9 @@
 
 skip=0 # 0 = false, 1 = true
 for arg in "$@"; do
-  if [[ arg == "--noconfirm" ]]; then
+  if [[ $arg == "--noconfirm" ]]; then
     skip=1
-    set -- "${@//arg/}"
+    set -- "${@//$arg/}"
     break
   fi
 done
