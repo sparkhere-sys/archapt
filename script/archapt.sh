@@ -3,7 +3,7 @@
 # archapt v1.0.2
 skip=0
 for arg in "$@"; do
-  if [[ arg == "--no-confirm" ]]; then
+  if [[ arg == "--noconfirm" ]]; then
     skip=1
     set -- "${@//arg/}"
     break
