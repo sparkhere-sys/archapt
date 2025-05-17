@@ -1,9 +1,21 @@
 #!/bin/bash
 
-# archapt
+# archapt v1.0.2
+skip=0
+for arg in "$@"; do
+  if [[ arg == "--no-confirm" ]]; then
+    skip=1
+    set -- "${@//arg/}"
+    break
+  fi
+done
 
 run() {
   echo "+ Running: $*"
+  if [[ $skip -eq 1 ]]; then
+    eval "$*"
+    return
+  fi
   read -p "Proceed? [Y/n]: "; confirm=
   if [[ "$confirm" =~ ^[Nn]$ ]]; then
     echo "Aborted."
