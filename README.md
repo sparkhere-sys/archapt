@@ -11,6 +11,10 @@ for the people who are too stupid to realize that arch's package manager is pacm
 - list
 - info
 
+**Flags**
+
+- --noconfirm
+
 ## INSTALLATION (AUR)
 coming soon™
 
@@ -32,6 +36,8 @@ git clone https://github.com/sparkhere-sys/archapt.git
 makepkg -si
 ```
 ...which automatically builds and installs archapt.
+
+If for whatever reason it doesn't work, move `archapt.sh` from the `script/` directory and put it with the PKGBUILD.
 
 #### Local Package
 run:
