@@ -10,6 +10,7 @@ for the people who are too stupid to realize that arch's package manager is pacm
 - update
 - list
 - info
+
 maybe don't try to run `apt moo`
 
 **Flags**
