@@ -1,6 +1,6 @@
 # Maintainer: Spark <spark-fr@outlook.com>
 pkgname=archapt
-pkgver=1.0.1
+pkgver=1.0.2
 pkgrel=1
 pkgdesc="for the people who are too stupid to realize that arch's package manager is pacman, not apt"
 arch=('any')
