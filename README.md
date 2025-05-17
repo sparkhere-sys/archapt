@@ -4,18 +4,18 @@ for the people who are too stupid to realize that arch's package manager is pacm
 **DISCLAIMER**: This script just converts APT commands to pacman commands. Don't get it twisted, APT wasn't actually ported to Arch, as cool as that might be.
 
 ## SUPPORTED COMMANDS
-- install
-- search
-- upgrade
-- update
-- list
-- info
+- `install`
+- `search`
+- `upgrade`
+- `update`
+- `list`
+- `info`
 
 maybe don't try to run `apt moo`
 
 **Flags**
 
-- --noconfirm
+- `--noconfirm`
 
 ## INSTALLATION (AUR)
 coming soon™
@@ -30,11 +30,11 @@ coming soon™
 **Instructions**
 
 Open up the terminal, then clone the repo:
-```bash
+```shell
 git clone https://github.com/sparkhere-sys/archapt.git
 ```
 `cd` to the directory with the cloned repo. Run:
-```bash
+```shell
 makepkg -si
 ```
 ...which automatically builds and installs archapt.
@@ -43,21 +43,21 @@ If for whatever reason it doesn't work, move `archapt.sh` from the `script/` dir
 
 #### Local Package
 run:
-```bash
+```shell
 sudo pacman -U (replace this with the package path)
 ```
 
 ### Script
 just download it and put it wherever you want. run this command:
 
-```bash
+```shell
 chmod +x archapt.sh
 ```
 
 ### Binary
 do these commands:
 
-```bash
+```shell
 cd /usr/bin
 sudo touch apt
 chmod +x apt
