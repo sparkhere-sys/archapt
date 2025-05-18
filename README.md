@@ -30,11 +30,11 @@ coming soon™
 **Instructions**
 
 Open up the terminal, then clone the repo:
-```shell
+```bash
 git clone https://github.com/sparkhere-sys/archapt.git
 ```
 `cd` to the directory with the cloned repo. Run:
-```shell
+```bash
 makepkg -si
 ```
 ...which automatically builds and installs archapt.
@@ -43,21 +43,21 @@ If for whatever reason it doesn't work, move `archapt.sh` from the `script/` dir
 
 #### Local Package
 run:
-```shell
+```bash
 sudo pacman -U (replace this with the package path)
 ```
 
 ### Script
 just download it and put it wherever you want. run this command:
 
-```shell
+```bash
 chmod +x archapt.sh
 ```
 
 ### Binary
 do these commands:
 
-```shell
+```bash
 cd /usr/bin
 sudo touch apt
 chmod +x apt
