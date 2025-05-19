@@ -5,6 +5,7 @@ for the people who are too stupid to realize that arch's package manager is pacm
 
 ## SUPPORTED COMMANDS
 - `install`
+- `remove`
 - `search`
 - `upgrade`
 - `update`
