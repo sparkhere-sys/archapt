@@ -5,7 +5,7 @@
 # default variables
 skip=0 # 0 = false, 1 = true
 usesyu=1 # 2 = use -Sy
-flag_noupgrade=0
+flag_upgrade=0
 flag_update=0
 args=()
 flags=()
