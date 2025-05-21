@@ -8,8 +8,8 @@ things that are done will be ~~crossed out~~.
 - nothing rn
 
 ### additions
-- nothing rn
+- new flag: `--norun`
 
 ### script changes
 - don't use `eval`
-- make the script better or just rewrite it and make it do the same function
+- ~~better flag handling~~
