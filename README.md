@@ -12,11 +12,13 @@ for the people who are too stupid to realize that arch's package manager is pacm
 - `list`
 - `info`
 
-maybe don't try to run `apt moo`
+maybe don't try to run `apt moo`.
 
 **Flags**
 
 - `--noconfirm`
+- `--noupgrade`
+- `--update`
 
 ## INSTALLATION (AUR)
 coming soon™
@@ -27,6 +29,7 @@ coming soon™
 **Dependencies:**
 - Arch or any Arch-based Linux distro (duh)
 - base-devel (install with sudo pacman -S --needed base-devel)
+This doesn't work on WSL, because there's no `systemd`.
   
 **Instructions**
 
