@@ -5,7 +5,7 @@ for the people who are too stupid to realize that arch's package manager is pacm
 
 ## SUPPORTED COMMANDS
 - `install`
-- `remove`
+- `remove` or `autoremove` (`autoremove` isn't necessary lol, pacman handles dependencies better)
 - `search`
 - `upgrade`
 - `update`
@@ -16,9 +16,9 @@ maybe don't try to run `apt moo`.
 
 **Flags**
 
-- `--noconfirm`
-- `--noupgrade`
-- `--update`
+- `--noconfirm`: Removes the script and pacman's confirm prompts.
+- `--noupgrade`: Uses `-S` instead of `-Syu`. Can't be used with `--update`.
+- `--update`: Uses `-Sy` instead of `-Syu`. Can't be used with `--noupgrade`.
 
 ## INSTALLATION (AUR)
 coming soon™
