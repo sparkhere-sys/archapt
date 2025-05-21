@@ -1,8 +1,8 @@
 # Maintainer: Spark <spark-fr@outlook.com>
 pkgname=archapt
-pkgver=1.0.2
+pkgver=1.1.0
 pkgrel=1
-pkgdesc="for the people who are too stupid to realize that arch's package manager is pacman, not apt"
+pkgdesc="for the people who are too stupid to realize that arch's package manager is pacman, not apt. made with <3 by Spark"
 arch=('any')
 license=('MIT')
 depends=('bash')
