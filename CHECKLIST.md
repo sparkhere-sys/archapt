@@ -2,7 +2,7 @@
 things that are done will be ~~crossed out~~.
 
 ### bugfixes
-- none that i'm aware of
+- none that i'm aware of. make an issue or DM me (spark_sys) on discord
 
 ### QOL improvements
 - nothing rn
@@ -13,3 +13,6 @@ things that are done will be ~~crossed out~~.
 ### script changes
 - don't use `eval`
 - ~~better flag handling~~
+
+### maybe?
+- nothing rn 
