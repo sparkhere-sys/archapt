@@ -1,27 +1,15 @@
 #!/bin/bash
 
-# archapt v1.1.0 - made with <3 by Spark
+# archapt v1.1.1 - made with <3 by Spark
 
 # default variables
 skip=0 # 0 = false, 1 = true
 usesyu=1 # 2 = use -Sy
+norun=0
 flag_upgrade=0
 flag_update=0
 args=()
-flags=()
-
-# uncomment the lines below if you want to use the old system for parsing flags
-# for arg in "$@"; do
-#  if [[ $arg == "--noconfirm" ]]; then
-#    skip=1
-#    set -- "${@//$arg/}"
-#    break
-#  elif [[ $arg == "--noupgrade" ]]; then
-#    usesyu=0
-#    set -- "${@//$arg/}"
-#    break
-#  fi
-# done
+flags=() # currently unused but it doesn't matter
 
 # FLAG PARSING
 for arg in "$@"; do
@@ -36,6 +24,9 @@ for arg in "$@"; do
     --update)
       usesyu=2
       flag_update=1
+      ;;
+    --dry-run)
+      norun=1
       ;;
     -*)
       flags+=("$arg")
@@ -71,15 +62,18 @@ help() {
 
 run() {
   echo "+ Running: $*"
+  if [[ $norun -eq 1 ]]; then
+    echo "(dry run)"
+  fi
   if [[ $skip -eq 1 ]]; then
-    eval "$*"
+    bash -c "$*"
     return
   fi
   read -p "Proceed? [Y/n]: " confirm
   if [[ "$confirm" =~ ^[Nn]$ ]]; then
     echo "Aborted."
   else
-    eval "$*"
+    bash -c "$*"
   fi  
 }
 
@@ -95,6 +89,7 @@ translate() {
         run "sudo pacman -Sy ${skip:+--noconfirm} ${packages[*]}"
       else
         run "sudo pacman -S ${skip:+--noconfirm} ${packages[*]}"
+      fi
       ;;
     remove|autoremove)
       run "sudo pacman -Rns ${skip:+--noconfirm} ${packages[*]}"
@@ -129,4 +124,4 @@ if [[ $# -eq 0 ]]; then
   exit 1
 fi
 
-translate "$@"
+translate
