@@ -2,7 +2,7 @@
 things that are done will be ~~crossed out~~ based on the **latest commit** and not the latest release
 
 ### bugfixes
-- none that i'm aware of. make an issue or DM me (spark_sys) on discord
+- none that i'm aware of. if you find any, make an issue or DM me (spark_sys) on discord
 
 ### QOL improvements
 - nothing rn
