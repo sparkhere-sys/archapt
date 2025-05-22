@@ -8,7 +8,7 @@ things that are done will be ~~crossed out~~ based on the **latest commit** and 
 - nothing rn
 
 ### additions
-- ~~new flag: `--norun`~~
+- ~~new flag: `--dry-run`~~
 
 ### script changes
 - ~~don't use `eval`~~
