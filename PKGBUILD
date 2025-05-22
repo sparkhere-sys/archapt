@@ -7,6 +7,7 @@ arch=('any')
 license=('MIT')
 depends=('bash')
 conflicts=('apt') # just to be safe lol
+provides=('apt') # hehe
 source=('script/archapt.sh')
 md5sums=('SKIP')
 
