@@ -19,6 +19,7 @@ maybe don't try to run `apt moo`.
 - `--noconfirm`: Removes the script and pacman's confirm prompts.
 - `--noupgrade`: Uses `-S` instead of `-Syu`. Can't be used with `--update`.
 - `--update`: Uses `-Sy` instead of `-Syu`. Can't be used with `--noupgrade`.
+- `--dry-run`: Doesn't *actually* run the pacman command. It's just there for your self-esteem.
 
 ## INSTALLATION (AUR)
 coming soon™
