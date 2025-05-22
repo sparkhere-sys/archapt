@@ -1,14 +1,15 @@
 # Maintainer: Spark <spark-fr@outlook.com>
 pkgname=archapt
-pkgver=1.1.0
+pkgver=1.1.1
 pkgrel=1
-pkgdesc="for the people who are too stupid to realize that arch's package manager is pacman, not apt. made with <3 by Spark"
+pkgdesc="For the people who forgot that they're not on Debian. Made with <3 by Spark"
 arch=('any')
 license=('MIT')
 depends=('bash')
-source=('archapt.sh')
+conflicts=('apt') # just to be safe lol
+source=('script/archapt.sh')
 md5sums=('SKIP')
 
 package() {
-  install -Dm755 "$srcdir/archapt.sh" "$pkgdir/usr/bin/apt"
+  install -Dm755 "$srcdir/script/archapt.sh" "$pkgdir/usr/bin/apt"
 }
