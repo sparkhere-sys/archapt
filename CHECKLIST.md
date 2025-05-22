@@ -11,8 +11,9 @@ things that are done will be ~~crossed out~~ based on the **latest commit** and 
 - ~~new flag: `--norun`~~
 
 ### script changes
-- don't use `eval`
+- ~~don't use `eval`~~
 - ~~better flag handling~~
+- think of an alternative to `bash -c`
 
 ### maybe?
-- nothing rn 
+- rewrite in python (as a separate package, so the bash version is still there)
