@@ -1,7 +1,22 @@
 # archapt
 for the people who are too stupid to realize that arch's package manager is pacman, not apt
 
-**DISCLAIMER**: This script just converts APT commands to pacman commands. Don't get it twisted, APT wasn't actually ported to Arch, as cool as that might be.
+**DISCLAIMER**: This bash script just converts APT commands to pacman commands. Don't get it twisted, APT wasn't actually ported to Arch, as cool as that might be.
+
+## EXAMPLE USAGE
+assuming you're using the package,
+```bash
+sudo apt install neofetch
+```
+```bash
+sudo apt install neofetch --noconfirm --noupgrade
+```
+```bash
+sudo apt install neofetch --dry-run
+```
+**NOTE**: archapt doesn't need to be run with `sudo`, but internally it uses pacman which *does* need to be run with `sudo`.
+
+if you're using the script, then instead of `apt` type `./archapt` or whatever you saved as the script.
 
 ## SUPPORTED COMMANDS
 - `install`
