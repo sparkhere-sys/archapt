@@ -40,9 +40,11 @@ maybe don't try to run `apt moo`.
 ## INSTALLATION (AUR)
 coming soon™
 
+not on the AUR yet :(
+
 ## INSTALLATION (manual)
 ### Package (.pkg.tar.xz)
-#### Building from Source
+#### Building from Source (recommended)
 **Dependencies:**
 - Arch or any Arch-based Linux distro (duh)
 - base-devel (install with sudo pacman -S --needed base-devel)
@@ -58,8 +60,9 @@ git clone https://github.com/sparkhere-sys/archapt.git
 
 `cd` into `script` and run:
 ```bash
-cp path/to/cloned/repo/script/
+cp /path/to/cloned/repo/script/ /path/to/cloned/repo/
 ```
+...or open 
 
 Run:
 ```bash
@@ -83,13 +86,16 @@ chmod +x archapt.sh
 ...which makes it executable. if you put it in /usr/bin/ or any protected directory, use `sudo`.
 
 ### Binary
-if you want to mimic `apt`, do these commands:
+for the love of all things holy, DO NOT do this on a debian based distro. this will overwrite `apt` if it exists.
+do these commands:
 
 ```bash
 cd /usr/bin
 sudo touch apt
 sudo chmod +x apt
 ```
+
+you don't have to name it `apt`, but it is recommended
 
 open `apt` with your chosen text editor (use `sudo` or else you'll be stuck in readonly mode)
 
