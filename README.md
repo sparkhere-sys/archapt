@@ -58,12 +58,6 @@ git clone https://github.com/sparkhere-sys/archapt.git
 ```
 `cd` to the directory with the cloned repo.
 
-`cd` into `script` and run:
-```bash
-cp /path/to/cloned/repo/script/ /path/to/cloned/repo/
-```
-...or open 
-
 Run:
 ```bash
 makepkg -si
