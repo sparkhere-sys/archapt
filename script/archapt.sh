@@ -62,7 +62,7 @@ fi
 help() {
   echo "Supported Commands:"
   echo "install"
-  echo "remove, autoremove"
+  echo "remove, autoremove, uninstall"
   echo "update"
   echo "upgrade"
   echo "search"
