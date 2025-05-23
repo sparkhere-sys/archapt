@@ -20,7 +20,7 @@ if you're using the script, then instead of `apt` type `./archapt` or whatever y
 
 ## SUPPORTED COMMANDS
 - `install`
-- `remove` or `autoremove` (`autoremove` isn't necessary lol, pacman handles dependencies better)
+- `remove`, `autoremove`, or `uninstall` (`autoremove` isn't necessary lol, pacman handles dependencies better)
 - `search`
 - `upgrade`
 - `update`
@@ -35,6 +35,7 @@ maybe don't try to run `apt moo`.
 - `--noupgrade`: Uses `-S` instead of `-Syu`. Can't be used with `--update`.
 - `--update`: Uses `-Sy` instead of `-Syu`. Can't be used with `--noupgrade`.
 - `--dry-run`: Doesn't *actually* run the pacman command and just translates it directly. It's only there for your self-esteem.
+- `--dont-remove-depends`: Uses `-R` instead of `-Rns`.
 
 ## INSTALLATION (AUR)
 coming soon™
@@ -53,13 +54,19 @@ Open up the terminal, then clone the repo:
 ```bash
 git clone https://github.com/sparkhere-sys/archapt.git
 ```
-`cd` to the directory with the cloned repo. Run:
+`cd` to the directory with the cloned repo.
+
+`cd` into `script` and run:
+```bash
+cp path/to/cloned/repo/script/
+```
+
+Run:
 ```bash
 makepkg -si
 ```
 ...which automatically builds and installs archapt.
 
-If for whatever reason it doesn't work, move `archapt.sh` from the `script/` directory and put it with the PKGBUILD.
 
 #### Local Package
 run:
