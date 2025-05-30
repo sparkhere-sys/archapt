@@ -1,6 +1,8 @@
 # archapt
 for the people who are too stupid to realize that arch's package manager is pacman, not apt
 
+this doesn't work on `wsl`. don't try it.
+
 **DISCLAIMER**: This bash script just converts `apt` commands to `pacman` commands. Don't get it twisted, `apt` wasn't actually ported to Arch.
 
 ## EXAMPLE USAGE
@@ -48,7 +50,6 @@ not on the AUR yet :(
 **Dependencies:**
 - Arch or any Arch-based Linux distro (duh)
 - base-devel (install with sudo pacman -S --needed base-devel)
-This doesn't work on WSL, because there's no `systemd`.
   
 **Instructions**
 
