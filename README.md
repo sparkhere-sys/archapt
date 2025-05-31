@@ -85,10 +85,7 @@ chmod +x archapt.sh
 ### Binary
 for the love of all things holy, DO NOT do this on a debian based distro. this will overwrite `apt` if it exists.
 
-download 
-
-do these commands:
-
+download the script, then do these commands:
 ```bash
 sudo cp /path/to/your/archapt.sh /usr/bin/apt
 sudo chmod +x /usr/bin/apt
