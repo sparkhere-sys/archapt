@@ -9,7 +9,7 @@ depends=('bash') # holy shit no way
 conflicts=('apt') # just to be safe lol
 provides=('apt') # hehe
 source=("script/$pkgname.sh" "LICENSE.md")
-md5sums=('SKIP')
+sha256sums=('SKIP')
 
 package() {
   install -Dm755 "$srcdir/script/archapt.sh" "$pkgdir/usr/bin/apt"
