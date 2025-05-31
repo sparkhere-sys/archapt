@@ -92,6 +92,7 @@ run() {
   read -p "> " confirm
   if [[ "$confirm" =~ ^[Nn]$ ]]; then
     echo "Aborted."
+    exit 0
   else
     bash -c "$*"
   fi  
