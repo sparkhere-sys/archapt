@@ -75,7 +75,7 @@ help() {
   echo "--update: Uses -Sy instead of -Syu. Does not work with --noupgrade."
   echo "--dry-run: Doesn't actually run the pacman command. It's only there for your self-esteem."
   echo "Usage: apt <command> <package> <flags>"
-  echo "archapt - Made with <3 by Spark"
+  echo "archapt v1.1.0 - made with <3 by Spark"
 }
 
 run() {
