@@ -87,9 +87,8 @@ for the love of all things holy, DO NOT do this on a debian based distro. this w
 do these commands:
 
 ```bash
-cd /usr/bin
-sudo touch apt
-sudo chmod +x apt
+sudo cp /path/to/your/archapt.sh /usr/bin/apt
+sudo chmod +x /usr/bin/apt
 ```
 
 you don't have to name it `apt`, but it is recommended
