@@ -3,8 +3,6 @@ for the people who are too stupid to realize that arch's package manager is pacm
 
 AUR support will not be added, just use [wahoo](https://github.com/sparkhere-sys/wahoo).
 
-this doesn't work on `wsl`. don't try it.
-
 **DISCLAIMER**: This bash script just converts `apt` commands to `pacman` commands. Don't get it twisted, `apt` wasn't actually ported to Arch.
 
 ## EXAMPLE USAGE
