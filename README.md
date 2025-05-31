@@ -99,3 +99,17 @@ sudo touch apt
 ```
 
 copy the script you downloaded, then paste everything into `apt`.
+
+# uhhh bye
+made with <3 by spark
+
+Contact Me:
+
+- [my email](mailto:spark-aur@proton.me)
+- my discord: spark-sys
+
+> I think its important to mention this:
+> Please, for the love of all that is holy, do NOT sell my work.
+> I'm fine with you doing anything with my stuff, I won't yell at you.
+> But if you are trying to use `archapt` for commercial usage then I will have to politely ask you to cease.
+> Bye! :D
