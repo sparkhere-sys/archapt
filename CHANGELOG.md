@@ -1,12 +1,12 @@
 # archapt changelog
-Will be updated after every release. Next release: v1.1.1
+Will be updated after every release. Next release: v1.1.0
 
 The first commit to archapt was on May 16 2025!
 
 Versions I never made a release for:
 
 - v1.0.3
-- v1.1.0
+
 ## v1.0.0 (Major update)
 Initial release. Last commit: May 16 2025
 ### Added
