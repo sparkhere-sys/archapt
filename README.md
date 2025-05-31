@@ -71,7 +71,7 @@ makepkg -si
 #### Local Package
 run:
 ```bash
-sudo pacman -U (replace this with the package path)
+sudo pacman -U /path/to/your/archapt-X.X.X-1-any.pkg.tar.zst
 ```
 
 ### Script
@@ -84,6 +84,9 @@ chmod +x archapt.sh
 
 ### Binary
 for the love of all things holy, DO NOT do this on a debian based distro. this will overwrite `apt` if it exists.
+
+download 
+
 do these commands:
 
 ```bash
@@ -91,8 +94,13 @@ sudo cp /path/to/your/archapt.sh /usr/bin/apt
 sudo chmod +x /usr/bin/apt
 ```
 
-you don't have to name it `apt`, but it is recommended
+you don't have to name it `apt`, but it is recommended.
 
-open `apt` with your chosen text editor (use `sudo` or else you'll be stuck in readonly mode)
+### Binary (but the dumb way)
+run:
+```bash
+cd /usr/bin/
+sudo touch apt
+```
 
-copy the script you downloaded and paste it into the file, then save.
+copy the script you downloaded, then paste everything into `apt`.
