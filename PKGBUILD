@@ -8,10 +8,10 @@ license=('Modified-MIT')
 depends=('bash') # holy shit no way
 conflicts=('apt') # just to be safe lol
 provides=('apt') # hehe
-source=("script/$pkgname.sh" "LICENSE.md")
+source=("script/$pkgname.sh" "LICENSE")
 sha256sums=('SKIP')
 
 package() {
   install -Dm755 "$srcdir/script/archapt.sh" "$pkgdir/usr/bin/apt"
-  install -Dm644 LICENSE.md "$pkgdir/usr/share/licenses/$pkgname/LICENSE.md"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
