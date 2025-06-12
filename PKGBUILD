@@ -9,7 +9,8 @@ depends=("bash" "sudo") # holy shit no way
 conflicts=("apt") # just to be safe lol
 provides=("apt") # hehe
 source=("$pkgname.sh" "LICENSE")
-sha256sums=("SKIP")
+sha256sums=('d1971b87cc55542c42e28043c9f7bab72a52daf7c0fff2d4ff63165071109a6f'
+            '7d58c0581544a88060b883012151056fb309da2dc74eaa2ee5de2b57c0897029')
 
 package() {
   install -Dm755 "$srcdir/script/archapt.sh" "$pkgdir/usr/bin/apt"
