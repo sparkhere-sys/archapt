@@ -1,4 +1,6 @@
 # archapt
+![GitHub Release](https://img.shields.io/github/v/release/sparkhere-sys/archapt)
+
 for the people who are too stupid to realize that arch's package manager is pacman, not apt
 
 AUR support will not be added, just use [wahoo](https://github.com/sparkhere-sys/wahoo).
