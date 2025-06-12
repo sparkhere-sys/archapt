@@ -6,6 +6,7 @@ pkgbase = archapt
 	license = Custom
 	depends = bash
 	depends = sudo
+	depends = pacman
 	provides = apt
 	conflicts = apt
 	source = archapt.sh
