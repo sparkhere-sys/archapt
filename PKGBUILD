@@ -5,10 +5,10 @@ pkgrel=1
 pkgdesc="For the people who forgot that they're not on Debian. Made with <3 by Spark"
 arch=("any")
 license=("Custom") # modified MIT, no commercial use clause added
-depends=("bash") # holy shit no way
+depends=("bash" "sudo") # holy shit no way
 conflicts=("apt") # just to be safe lol
 provides=("apt") # hehe
-source=("script/$pkgname.sh" "LICENSE")
+source=("$pkgname.sh" "LICENSE")
 sha256sums=("SKIP")
 
 package() {
