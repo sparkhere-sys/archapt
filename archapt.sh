@@ -45,22 +45,27 @@ if [[ $flag_upgrade -eq 1 && $flag_update -eq 1 ]]; then
   echo "Error: You cannot use --noupgrade and --update at the same time."
   echo "(1) --noupgrade"
   echo "(2) --update"
-  echo "(q) exit"
+  echo "(0) don't use either and use pacman -Syu"
+  echo "(q) quit"
   echo "Pick an option from the above."
   read -p "> " confirm2
-  if [[ "$confirm2" -eq 1 ]]; then
+  if [[ "$confirm2" == 1 ]]; then
       flag_update=0
       usesyu=0
-  elif [[ "$confirm2" -eq 2 ]]; then
+  elif [[ "$confirm2" == 2 ]]; then
       flag_upgrade=0
       usesyu=2
+  elif [[ "$confirm2" == 0 ]]; then
+      flag_update=0
+      flag_upgrade=0
+      usesyu=1
   else
-    exit 1
+    exit 0
   fi
 fi
 
 help() {
-  echo "Supported Commands:"
+  echo "[Supported Commands]"
   echo "install"
   echo "remove, autoremove, uninstall"
   echo "update"
@@ -69,7 +74,7 @@ help() {
   echo "list"
   echo "info"
   echo "...but not moo."
-  echo "Flags:"
+  echo "[Flags]"
   echo "--noconfirm: Skips archapt and pacman's confirm prompts."
   echo "--noupgrade: Uses -S instead of -Syu. Does not work with --update."
   echo "--update: Uses -Sy instead of -Syu. Does not work with --noupgrade."
@@ -79,7 +84,7 @@ help() {
 }
 
 run() {
-  echo "+ Running: $*"
+  echo ":: Running: $*"
   if [[ $norun -eq 1 ]]; then
     echo "(dry run)"
     exit 0
