@@ -10,7 +10,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
+        
+      - name: Create and push tag v1.1.0
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -fa v1.1.0 -m "Tag version v1.1.0"
+          git push origin --force v1.1.0
+          
       - name: Set up Arch container and build package
         uses: addnab/docker-run-action@v3
         id: build
@@ -33,13 +40,6 @@ jobs:
         run: |
           echo "package_path=$(cat /repo/package_path.txt)" >> $GITHUB_OUTPUT
           echo "package_name=$(cat /repo/package_name.txt)" >> $GITHUB_OUTPUT
-      
-      - name: Create and push tag v1.1.0
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag -fa v1.1.0 -m "Tag version v1.1.0"
-          git push origin --force v1.1.0
       
       - name: Create GitHub release 1.1.0
         id: create_release
