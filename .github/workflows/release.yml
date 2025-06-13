@@ -51,7 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v1.1.0
-          release_name: Version 1.1.0
+          name: Version 1.1.0
           body: |
             archapt is basically complete now. cool, huh?
             there are still some additions that could be made, but for the most part, its good.
