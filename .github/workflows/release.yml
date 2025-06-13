@@ -36,6 +36,7 @@ jobs:
             relative_pkg=${pkg#/repo/}
             echo "$relative_pkg" >> /repo/package_path.txt
             echo "$(basename "$pkg")" >> /repo/package_name.txt
+            chmod 666 /repo/package_path.txt /repo/package_name.txt
 
       - name: Read package path and name
         id: get_path
