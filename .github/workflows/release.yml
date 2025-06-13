@@ -43,6 +43,11 @@ jobs:
         run: |
           echo "package_path=$(cat /repo/package_path.txt)" >> $GITHUB_OUTPUT
           echo "package_name=$(cat /repo/package_name.txt)" >> $GITHUB_OUTPUT
+
+      - name: Debug package path
+        run: |
+          echo "Package path: '${{ steps.get_path.outputs.package_path }}'"
+          ls -l ${{ steps.get_path.outputs.package_path }} || echo "File not found."
       
       - name: Create GitHub release 1.1.0 and upload built package
         id: create_release
