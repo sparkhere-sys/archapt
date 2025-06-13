@@ -8,6 +8,7 @@ on:
       - main
     paths:
       - 'PKGBUILD'
+      - 'archapt.sh'
   workflow_dispatch:
 
 jobs:
