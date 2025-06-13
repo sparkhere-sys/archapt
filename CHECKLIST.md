@@ -1,5 +1,5 @@
 # archapt checklist
-things that are done will be ~~crossed out~~ based on the **latest commit** and not the latest release
+based on the **latest commit** and not the latest release
 
 ### bugfixes
 - none that i'm aware of. if you find any, make an issue or DM me (spark_sys) on discord
@@ -8,12 +8,12 @@ things that are done will be ~~crossed out~~ based on the **latest commit** and 
 - nothing rn
 
 ### additions
-- ~~new flag: `--dry-run`~~
+- [x] new flag: `--dry-run`
 
 ### script changes
-- ~~don't use `eval`~~
-- ~~better flag handling~~
-- think of an alternative to `bash -c`
+- [x] don't use `eval`
+- [x] better flag handling
+- [ ] think of an alternative to `bash -c`
 
 ### maybe?
-- rewrite in python (as a separate package, so the bash version is still there)
+- [ ] rewrite in python (as a separate package, so the bash version is still there)
