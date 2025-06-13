@@ -18,14 +18,15 @@ jobs:
           image: archlinux:latest
           options: -v ${{ github.workspace }}:/repo --rm
           run: |
-            pacman -Sy --noconfirm base-devel git
+            pacman -Sy --noconfirm base-devel
             useradd -m builder
             echo "builder ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/builder
             chown -R builder:builder /repo
             sudo -u builder bash -c "cd /repo && makepkg --noconfirm -s"
 
             pkg=$(find /repo -maxdepth 1 -type f -name "*.pkg.tar.zst" | head -n 1)
-            echo "::set-output name=package::$pkg"
+            echo "package_path=$pkg" >> $GITHUB_OUTPUT
+            echo "package_name=$(basename "$pkg")" >> $GITHUB_OUTPUT
 
       - name: Create GitHub release 1.1.0
         id: create_release
@@ -33,20 +34,23 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag-name: v1.1.0
-          release-name: Version 1.1.0
+          tag_name: v1.1.0
+          release_name: Version 1.1.0
           body: archapt is basically complete now. cool, huh? there are still some additions that could be made, but for the most part, its good
           draft: false
           prerelease: false
 
       - name: Upload built package
-        uses: actions/upload-release-asset@v1
+        ## uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ## with:
+          ## upload_url: ${{ steps.create_release_outputs.upload_url }}
+          ## asset_path: ${{ steps.build.outputs.package_path }}
+          ## asset_name: $(basename ${{ steps.build.outputs.package_name }})
+          ## asset_content_type: application/octet-stream
+        uses: softprops/action-gh-release@v1
         with:
-          upload_url: ${{ steps.create_release_outputs.upload_url }}
-          asset_path: ${{ steps.build.outputs.package }}
-          asset_name: $(basename ${{ steps.build.outputs.package }})
-          asset_content_type: application/octet-stream
+          files: ${{ steps.build.outputs.package_path }}
 
 # done
