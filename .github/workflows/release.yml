@@ -25,9 +25,15 @@ jobs:
             sudo -u builder bash -c "cd /repo && makepkg --noconfirm -s"
 
             pkg=$(find /repo -maxdepth 1 -type f -name "*.pkg.tar.zst" | head -n 1)
-            echo "package_path=$pkg" >> $GITHUB_OUTPUT
-            echo "package_name=$(basename "$pkg")" >> $GITHUB_OUTPUT
+            echo "$pkg" >> /repo/package_path.txt
+            echo "$(basename "$pkg")" >> /repo/package_name.txt
 
+      - name: Read package path and name
+        id: get_path
+        run: |
+          echo "package_path=$(cat /repo/package_path.txt)" >> $GITHUB_OUTPUT
+          echo "package_name=$(cat /repo/package_name.txt)" >> $GITHUB_OUTPUT
+      
       - name: Create GitHub release 1.1.0
         id: create_release
         uses: actions/create-release@v1
@@ -36,7 +42,12 @@ jobs:
         with:
           tag_name: v1.1.0
           release_name: Version 1.1.0
-          body: archapt is basically complete now. cool, huh? there are still some additions that could be made, but for the most part, its good
+          body: |
+            archapt is basically complete now. cool, huh?
+            there are still some additions that could be made, but for the most part, its good.
+            also this github actions workflow was so hard to make
+            peace out, enjoy archapt fellas
+            - spark
           draft: false
           prerelease: false
 
@@ -51,6 +62,6 @@ jobs:
           ## asset_content_type: application/octet-stream
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{ steps.build.outputs.package_path }}
+          files: ${{ steps.get_path.outputs.package_path }}
 
 # done
