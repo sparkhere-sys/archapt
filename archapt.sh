@@ -131,13 +131,13 @@ translate() {
       run "sudo pacman -Syu ${skip:+--noconfirm}"
       ;;
     search)
-      run "sudo pacman -Ss ${packages[*]}"
+      run "pacman -Ss ${packages[*]}"
       ;;
     list)
-      run "sudo pacman -Q" 
+      run "pacman -Q" 
       ;;
     info)
-      run "sudo pacman -Qi ${packages[*]}"
+      run "pacman -Qi ${packages[*]}"
       ;;
     moo)
       echo "brother this is not debian" # i am not adding the ascii cow
