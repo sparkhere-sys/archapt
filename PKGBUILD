@@ -9,7 +9,7 @@ depends=("bash" "sudo" "pacman")
 conflicts=("apt") # just to be safe lol
 provides=("apt") # no shit sherlock
 source=("$pkgname.sh" "LICENSE")
-sha256sums=('9ca106d1a83fb8bbff84a206696844897c17513ff10d0f5b92d6cc86abcc1f7d'
+sha256sums=('f804fb75e2cc3b3aa6254817f4560f3f69ede0ed0adf3b2aa38180d44e8adc01'
             '7d58c0581544a88060b883012151056fb309da2dc74eaa2ee5de2b57c0897029')
 
 package() {
